@@ -30,7 +30,7 @@ cmake -GXcode \
       -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
       -DCMAKE_XCODE_ATTRIBUTE_ONLY_ACTIVE_ARCH=NO \
       -DCMAKE_IOS_INSTALL_COMBINED=YES \
-      -DMACOSX_BUNDLE_GUI_IDENTIFIER=org.khronos.spirv-cross \
+      -DSPIRV_CROSS_CLI=OFF \
       .. 
 
 xcodebuild -configuration Release install
