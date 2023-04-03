@@ -40,18 +40,18 @@ cd ..
 
 # move libraries into place
 mkdir libs
-#libtool -o libs/glslang_macos.a build/install/lib/*.a
-#libtool -o libs/glslang_ios.a build_ios/build/UninstalledProducts/iphoneos/*.a
-#libtool -o libs/glslang_ios_simulator.a build_ios/build/UninstalledProducts/iphonesimulator/*.a
+libtool -o libs/spirv-cross_macos.a build/*.a
+libtool -o libs/spirv-cross_ios.a build_ios/build/UninstalledProducts/iphoneos/*.a
+libtool -o libs/spirv-cross_ios_simulator.a build_ios/build/UninstalledProducts/iphonesimulator/*.a
 
-#xcodebuild -create-xcframework \
-#           -library libs/glslang_macos.a \
-#           -headers build/install/include \
-#           -library libs/glslang_ios.a \
-#           -headers build/install/include \
-#           -library libs/glslang_ios_simulator.a \
-#           -headers build/install/include \
-#           -output glslang.xcframework
+xcodebuild -create-xcframework \
+           -library libs/spirv-cross_macos.a \
+           -headers build/install/include \
+           -library libs/spirv-cross_ios.a \
+           -headers build/install/include \
+           -library libs/spirv-cross_ios_simulator.a \
+           -headers build/install/include \
+           -output SPIRV-Cross.xcframework
 
 mv SPIRV-Cross.xcframework ..
 cd ..
