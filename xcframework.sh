@@ -6,7 +6,7 @@ rm -rf SPIRV-Cross.xcframework
 
 git clone https://github.com/KhronosGroup/SPIRV-Cross
 cd SPIRV-Cross 
-git checkout tags/sdk-1.3.243.0
+git checkout tags/vulkan-sdk-1.4.309.0
 
 # macOS build
 mkdir build
